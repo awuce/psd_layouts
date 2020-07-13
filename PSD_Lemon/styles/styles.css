@@ -1,0 +1,81 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #000;
+	background-color: #eaeaea;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Comfortaa', cursive;
+}
+
+body {
+	height: 1200px;
+	/*width: 100%;*/
+}
+
+.container {}
+
+.logo {
+	/*margin-top: 250px;*/
+	margin-top: 118px;
+	text-align: center;
+}
+
+/*__________________________ TOP MENU __________________________*/
+.top-menu {
+	margin-top: 118px;
+	margin-left: 150px;
+	margin-right: 150px;
+	padding-top: 42px;
+	padding-bottom: 42px;
+	position: relative;
+	text-align: center;
+	background-color: #fff;
+}
+
+.top-menu * {
+	background-color: #fff;
+}
+.top-menu > * {
+	display: inline;
+}
+
+.top-menu_logo {
+	vertical-align: middle;
+}
+.top-menu_logo img {
+	width: 86px;
+}
+
+
+.top-menu_drop-down-menu {}
+.top-menu_drop-down-menu a {
+	text-transform: uppercase;
+	margin-left: 1%;
+}
+
+.top-menu_search-button input[type=text] {
+	width: 160px;
+	border: 1px solid #c2c2c2;
+	padding: 8px 30px;
+
+	background-image: url('../images/search-icon.png');
+	background-position: 10px 11px;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	margin-left: 1%;
+}
+.top-menu_search-button input[type=text]:focus {
+	/*border: 5px solid #eaeaea;*/
+}
+
+/*__________________________ MEDIA __________________________*/
+
+@media (max-width: 1100px) {
+	.top-menu {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
