@@ -8,15 +8,15 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-family: 'Comfortaa', cursive;
+	/*font-size: 16pt;*/
 }
 
 body {
-	height: 1200px;
+	/*height: 1200px;*/
 	/*width: 100%;*/
 }
 
 .container {}
-
 .logo {
 	/*margin-top: 250px;*/
 	margin-top: 118px;
@@ -25,16 +25,19 @@ body {
 
 /*__________________________ TOP MENU __________________________*/
 .top-menu {
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.top-menu, .hero-page {
 	margin-top: 118px;
 	margin-left: 150px;
 	margin-right: 150px;
 	padding-top: 42px;
 	padding-bottom: 42px;
-	position: relative;
-	text-align: center;
-	background-color: #fff;
 }
-
 .top-menu * {
 	background-color: #fff;
 }
@@ -43,12 +46,12 @@ body {
 }
 
 .top-menu_logo {
-	vertical-align: middle;
+	margin-right: 5%;
 }
 .top-menu_logo img {
+	vertical-align: middle;
 	width: 86px;
 }
-
 
 .top-menu_drop-down-menu {}
 .top-menu_drop-down-menu a {
@@ -65,10 +68,78 @@ body {
 	background-position: 10px 11px;
 	background-size: 15px;
 	background-repeat: no-repeat;
-	margin-left: 1%;
+	margin-left: 5%;
 }
 .top-menu_search-button input[type=text]:focus {
 	/*border: 5px solid #eaeaea;*/
+}
+
+/*__________________________ HERO PAGE __________________________*/
+.hero-page {
+	margin-top: 70px;
+	background-image: url('../images/slider-photo1.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+}
+.hero-page * {
+	background: none;
+}
+.hero-page_logo, .hero-page_head, .hero-page_body, .hero-page_get-button {
+	padding-left: 8%;
+}
+.hero-page_logo img {
+	width: 340px;
+}
+.hero-page_head {
+	font-size: 24pt;
+	padding-top: 35px;
+	text-transform: capitalize;
+	color: #921026;
+}
+.hero-page_body {
+	padding-top: 30px;
+	width: 40%;
+}
+.hero-page_get-button {
+	padding-top: 30px;
+}
+.hero-page_get-button button {
+	text-transform: uppercase;
+	padding: 5px 10px;
+}
+
+/*__________________________ FOOTER __________________________*/
+
+.footer {
+	margin-top: 70px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	background-color: #2f2f2f;
+}
+.footer * {
+	background-color: #2f2f2f;
+}
+.footer > * {
+	display: inline;
+}
+.footer_logo {
+	margin-right: 5%;
+}
+.footer_logo img {
+	width: 86px;
+	vertical-align: middle;
+}
+.footer_menu a {
+	text-transform: uppercase;
+	margin-left: 1%;
+}
+.footer_reserved {
+	text-transform: uppercase;
+	margin-left: 5%;
 }
 
 /*__________________________ MEDIA __________________________*/
