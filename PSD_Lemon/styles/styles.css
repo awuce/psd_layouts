@@ -25,16 +25,18 @@ body {
 
 /*__________________________ TOP MENU __________________________*/
 .top-menu {
+	margin-top: 118px;
 	position: relative;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	text-align: center;
+
 }
 
-.top-menu, .hero-page {
-	margin-top: 118px;
+.top-menu, .hero-page, .recipees, .recipe-full {
 	margin-left: 150px;
 	margin-right: 150px;
+	margin-bottom: 10px;
 	padding-top: 42px;
 	padding-bottom: 42px;
 }
@@ -79,8 +81,11 @@ body {
 	margin-top: 70px;
 	background-image: url('../images/slider-photo1.png');
 	background-size: 100%;
+	/*background-attachment: fixed;*/
+	background-origin: padding-box;
 	background-repeat: no-repeat;
-
+	background-position: 100% 50%;
+	/*background-color: #fff;*/
 }
 .hero-page * {
 	background: none;
@@ -108,9 +113,64 @@ body {
 	text-transform: uppercase;
 	padding: 5px 10px;
 }
+/*__________________________ RECIPES __________________________*/
+.recipees {
+	margin-top: 70px;
+	display: flex;
+	padding-left: 5%;
+	background-color: #fff; 
+}
+.recipees * {
+	background-color: #fff; 
+}
+.recipe {
+	margin-left: 1%;
+	width: 30%;
+}
+.recipe_image img {
+	width: 350px;
+}
+.recipe_head div {
+	font-size: 18pt;
+	text-transform: capitalize;
+	text-align: left;
+}
+.recipe_info img {
+	width: 17px;
+	vertical-align: middle;
+
+}
+/*__________________________ RECIPE FULL __________________________*/
+.recipe-full {
+	margin-top: 70px;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-bottom: 10px;
+	/*padding-top: 42px;*/
+	/*padding-bottom: 42px;*/
+
+/*	background-color: #fff;
+	background-size: 100%;
+	background-image: url('../images/recipe.png');
+	background-origin: padding-box;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;*/
+	/*width: 100%;*/
+}
+.recipe-full * {
+	background-color: none;
+	background-color: #fff;
+}
+.recipe-full_image img {
+}
+.recipe-full_info button {
+	text-transform: uppercase;
+	width: 160px;
+	border: 1px solid #c2c2c2;
+	padding: 8px 30px;
+}
 
 /*__________________________ FOOTER __________________________*/
-
 .footer {
 	margin-top: 70px;
 	padding-top: 70px;
