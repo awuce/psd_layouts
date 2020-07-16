@@ -18,28 +18,28 @@ body {
 
 .container {}
 .logo {
-	/*margin-top: 250px;*/
-	margin-top: 118px;
+	margin-top: 4.5%;
 	text-align: center;
+}
+
+.top-menu, .hero-page, .recipees, .recipe-full {
+	margin-top: 4.55%;
+	margin-left: 12%;
+	margin-right: 12%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.top-menu, .hero-page, .recipees, .recipe-full {
+	padding-top: 2.55%;
+	padding-bottom: 2.55%;
 }
 
 /*__________________________ TOP MENU __________________________*/
 .top-menu {
-	margin-top: 118px;
 	position: relative;
 	background-color: #fff;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	text-align: center;
-
 }
 
-.top-menu, .hero-page, .recipees, .recipe-full {
-	margin-left: 150px;
-	margin-right: 150px;
-	margin-bottom: 10px;
-	padding-top: 42px;
-	padding-bottom: 42px;
-}
 .top-menu * {
 	background-color: #fff;
 }
@@ -78,14 +78,13 @@ body {
 
 /*__________________________ HERO PAGE __________________________*/
 .hero-page {
-	margin-top: 70px;
 	background-image: url('../images/slider-photo1.png');
-	background-size: 100%;
-	/*background-attachment: fixed;*/
-	background-origin: padding-box;
 	background-repeat: no-repeat;
-	background-position: 100% 50%;
-	/*background-color: #fff;*/
+	background-size: cover;
+	background-position: 50%;
+	/*background-attachment: fixed;*/
+	/*background-origin: padding-box;*/
+	/*background-color: none;*/
 }
 .hero-page * {
 	background: none;
@@ -115,20 +114,21 @@ body {
 }
 /*__________________________ RECIPES __________________________*/
 .recipees {
-	margin-top: 70px;
 	display: flex;
+	background-color: #fff;
 	padding-left: 5%;
-	background-color: #fff; 
+	padding-right: 5%;
 }
 .recipees * {
 	background-color: #fff; 
 }
 .recipe {
-	margin-left: 1%;
-	width: 30%;
+	/*float: left;*/
+	margin-left: 3%;
+	width: 33.33%;
 }
 .recipe_image img {
-	width: 350px;
+	/*width: 350px;*/
 }
 .recipe_head div {
 	font-size: 18pt;
@@ -142,32 +142,43 @@ body {
 }
 /*__________________________ RECIPE FULL __________________________*/
 .recipe-full {
-	margin-top: 70px;
-	margin-left: 150px;
-	margin-right: 150px;
-	margin-bottom: 10px;
-	/*padding-top: 42px;*/
-	/*padding-bottom: 42px;*/
-
-/*	background-color: #fff;
+	padding-top: 42px;
+	padding-bottom: 42px;
 	background-size: 100%;
 	background-image: url('../images/recipe.png');
-	background-origin: padding-box;
 	background-repeat: no-repeat;
-	background-position: 100% 50%;*/
-	/*width: 100%;*/
+	background-size: cover;
+	background-position: 50%;
 }
 .recipe-full * {
-	background-color: none;
-	background-color: #fff;
+	/*background-color: none;*/
+	/*background-color: #fff;*/
 }
 .recipe-full_image img {
+}
+.recipe-full_head {
+	display: block;
+	padding-left: 600px;
+	text-transform: capitalize;
+	color: #055555;
+	font-size: 18pt;
+}
+.recipe-full_info {
+	padding-left: 600px;
+}
+.recipe-full_info div {
+	display: block;
+	float: left;
 }
 .recipe-full_info button {
 	text-transform: uppercase;
 	width: 160px;
 	border: 1px solid #c2c2c2;
 	padding: 8px 30px;
+}
+.recipe-full_body {
+	padding-left: 600px;
+	padding-right: 20px;
 }
 
 /*__________________________ FOOTER __________________________*/
