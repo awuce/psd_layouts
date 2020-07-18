@@ -20,7 +20,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background-color: #555555;
 }
-.container {}
+.container {
+	margin-left: 12%;
+	margin-right: 12%;
+}
 
 .logo {
 	margin-top: 4.5%;
@@ -29,8 +32,6 @@ body::-webkit-scrollbar-thumb {
 
 .top-menu, .hero-page, .recipees, .recipe-full {
 	margin-top: 4.55%;
-	margin-left: 12%;
-	margin-right: 12%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .top-menu, .hero-page, .recipees, .recipe-full {
@@ -41,12 +42,12 @@ body::-webkit-scrollbar-thumb {
 /*__________________________ TOP MENU __________________________*/
 .top-menu {
 	position: relative;
-	background-color: #fff;
+	background-color: #ffffff;
 	text-align: center;
 }
 
 .top-menu * {
-	background-color: #fff;
+	background-color: #ffffff;
 }
 .top-menu > * {
 	display: inline;
@@ -113,16 +114,17 @@ body::-webkit-scrollbar-thumb {
 .hero-page_get-button button {
 	text-transform: uppercase;
 	padding: 5px 10px;
+	cursor: pointer;
 }
 /*__________________________ RECIPES __________________________*/
 .recipees {
 	padding-left: 5%;
 	padding-right: 5%;
 	display: flex;
-	background-color: #fff;
+	background-color: #ffffff;
 }
 .recipees * {
-	background-color: #fff; 
+	background-color: #ffffff; 
 }
 .recipe {
 	margin-left: 3%;
@@ -170,6 +172,7 @@ body::-webkit-scrollbar-thumb {
 	text-transform: uppercase;
 	width: 160px;
 	border: 1px solid #c2c2c2;
+	cursor: pointer;
 }
 .recipe-full_body {
 	margin-top: 15px;
@@ -192,9 +195,103 @@ body::-webkit-scrollbar-thumb {
 	margin-top: 15px;
 }
 
+/*__________________________ ERROR __________________________*/
+.error-404, .author {
+	margin-top: 70px;
+	padding: 2% 3%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	width: 45%;
+	height: 500px;
+}
+.error-404 {
+	background-image: url('../images/404.png');
+	background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+	float: left;
+}
+.error-404_text, .author_text {
+	font-size: 14pt;
+	margin-left: 2%;
+}
+.error-404_line, .author_line {
+	background-color: #dddddd;
+	height: 2px;
+}
+.error-404_head {
+	font-size: 18pt;
+	margin-top: 31%;
+	text-align: center;
+}
+.error-404_body {
+	text-align: center;
+	text-transform: uppercase;
+	color: #a9a9a9;
+}
+.error-404_icon {
+	font-size: 26pt;
+	color: #a9a9a9;
+	margin: 2% auto 0 auto;
+	writing-mode: vertical-lr;
+	transform: rotate(-20deg);
+}
+.error-404_button {
+	text-transform: uppercase;
+	background-color: #ffffff;
+	border: 1px solid #a9a9a9;
+	display: block;
+	margin: 25% auto 0 auto;
+	padding: 5px 35px;
+	cursor: pointer;
+}
+/*__________________________ AUTHOR __________________________*/
+.author {
+	background-color: #ffffff;
+	right: 0;
+	float: right;
+}
+.author_image {
+	margin-top: 5%;
+	margin-right: 4%;
+	height: 100%;
+	float: left;
+}
+.author_info {
+	margin-top: 5%;
+}
+.author-info_name {
+	font-size: 16pt;
+	font-weight: bold;
+}
+.author-info_icons {
+	margin-top: 2%;
+}
+.author-info_icons > a {
+	margin-right: 1%;
+}
+.author-info_line {
+	margin-top: 2%;
+	background-color: #dddddd;
+	height: 2px;
+	overflow: hidden;
+}
+.author-info_head {
+	margin-top: 4%;
+	text-transform: capitalize;
+}
+.author-info_body {
+	margin-top: 4%;
+	font-size: 11pt;
+	font-weight: normal;
+	font-style: italic;
+}
+
 /*__________________________ FOOTER __________________________*/
 .footer {
-	margin-top: 70px;
+	clear: left;
+	margin-top: 600px;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	width: 100%;
