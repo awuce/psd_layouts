@@ -53,18 +53,18 @@ body::-webkit-scrollbar-thumb {
 	display: inline;
 }
 
-.top-menu_logo {
+.top-menu__logo {
 	margin-right: 5%;
 }
-.top-menu_logo img {
+.top-menu__logo img {
 	vertical-align: middle;
 	width: 86px;
 }
-.top-menu_drop-down-menu a {
+.top-menu__drop-down-menu a {
 	text-transform: uppercase;
 	margin-left: 1%;
 }
-.top-menu_search-button input[type=text] {
+.top-menu__search-button input[type=text] {
 	width: 160px;
 	border: 1px solid #c2c2c2;
 	padding: 8px 30px;
@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 	background-repeat: no-repeat;
 	margin-left: 5%;
 }
-.top-menu_search-button input[type=text]:focus {
+.top-menu__search-button input[type=text]:focus {
 	/*border: 5px solid #eaeaea;*/
 }
 
@@ -92,26 +92,26 @@ body::-webkit-scrollbar-thumb {
 .hero-page * {
 	background: none;
 }
-.hero-page_logo, .hero-page_head, .hero-page_body, .hero-page_get-button {
+.hero-page__logo, .hero-page__head, .hero-page__body, .hero-page__get-button {
 	padding-left: 8%;
 }
-.hero-page_logo img {
+.hero-page__logo img {
 	width: 340px;
 }
-.hero-page_head {
+.hero-page__head {
 	font-size: 24pt;
 	padding-top: 35px;
 	text-transform: capitalize;
 	color: #921026;
 }
-.hero-page_body {
+.hero-page__body {
 	padding-top: 30px;
 	width: 40%;
 }
-.hero-page_get-button {
+.hero-page__get-button {
 	padding-top: 30px;
 }
-.hero-page_get-button button {
+.hero-page__get-button button {
 	text-transform: uppercase;
 	padding: 5px 10px;
 	cursor: pointer;
@@ -130,14 +130,14 @@ body::-webkit-scrollbar-thumb {
 	margin-left: 3%;
 	width: 33.33%;
 }
-.recipe_image img {}
+.recipe__image img {}
 
-.recipe_head div {
+.recipe__head div {
 	font-size: 18pt;
 	text-transform: capitalize;
 	text-align: left;
 }
-.recipe_info img {
+.recipe__info img {
 	width: 17px;
 	vertical-align: middle;
 
@@ -153,20 +153,20 @@ body::-webkit-scrollbar-thumb {
 .recipe-full > * {
 	background-color: none;
 }
-.recipe-full_head {
+.recipe-full__head {
 	margin-left: 600px;
 	font-size: 18pt;
 	text-transform: capitalize;
 	color: #055555;
 }
-.recipe-full_info {
+.recipe-full__info {
 	margin-left: 600px;
 }
-.recipe-full_info img {
+.recipe-full__info img {
 	width: 17px;
 	vertical-align: middle;
 }
-.recipe-full_info button {
+.recipe-full__info button {
 	margin-left: 41%;
 	padding: 8px 30px;
 	text-transform: uppercase;
@@ -174,7 +174,7 @@ body::-webkit-scrollbar-thumb {
 	border: 1px solid #c2c2c2;
 	cursor: pointer;
 }
-.recipe-full_body {
+.recipe-full__body {
 	margin-top: 15px;
 	margin-right: 20px;
 	margin-left: 600px;
@@ -182,23 +182,31 @@ body::-webkit-scrollbar-thumb {
 	height: 250px;
 	overflow-y: scroll;
 }
-.recipe-full_body::-webkit-scrollbar {
+.recipe-full__body::-webkit-scrollbar {
 	width: 5px;
 }
-.recipe-full_body::-webkit-scrollbar-track {
+.recipe-full__body::-webkit-scrollbar-track {
 	background-color: #dddddd;
 }
-.recipe-full_body::-webkit-scrollbar-thumb {
+.recipe-full__body::-webkit-scrollbar-thumb {
 	background-color: #555555;
 }
-.recipe-full_body div {
+.recipe-full__body div {
 	margin-top: 15px;
 }
 
+/*__________________________ 2 BLOCKS __________________________*/
 /*__________________________ ERROR __________________________*/
-.error-404, .author {
+.two-blocks {
+	display: flex;
+	flex-direction: row; /* column; when mobile*/
+	flex-wrap: wrap;
+}
+.two-blocks > div {
+	flex: 1;
 	margin-top: 70px;
 	padding: 2% 3%;
+	background-color: #ffffff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	width: 45%;
 	height: 500px;
@@ -210,92 +218,195 @@ body::-webkit-scrollbar-thumb {
     -moz-background-size: 100%;
     -o-background-size: 100%;
     background-size: 100%;
-	float: left;
 }
-.error-404_text, .author_text {
+.error-404__text, .author__text {
 	font-size: 14pt;
 	margin-left: 2%;
 }
-.error-404_line, .author_line {
+.error-404__line, .author__line {
 	background-color: #dddddd;
 	height: 2px;
 }
-.error-404_head {
-	font-size: 18pt;
-	margin-top: 31%;
+.error-404__full {
+	margin-top: 32%;
 	text-align: center;
 }
-.error-404_body {
-	text-align: center;
+.error-404-full__head {
+	font-size: 18pt;
+}
+.error-404-full__body {
 	text-transform: uppercase;
 	color: #a9a9a9;
 }
-.error-404_icon {
+.error-404-full__icon {
 	font-size: 26pt;
 	color: #a9a9a9;
 	margin: 2% auto 0 auto;
 	writing-mode: vertical-lr;
 	transform: rotate(-20deg);
 }
-.error-404_button {
+.error-404__button {
 	text-transform: uppercase;
 	background-color: #ffffff;
 	border: 1px solid #a9a9a9;
 	display: block;
-	margin: 25% auto 0 auto;
+	margin: 26% auto 0 auto;
 	padding: 5px 35px;
 	cursor: pointer;
 }
 /*__________________________ AUTHOR __________________________*/
 .author {
-	background-color: #ffffff;
-	right: 0;
-	float: right;
+	margin-left: 6%;
 }
-.author_image {
+.author__image {
 	margin-top: 5%;
 	margin-right: 4%;
 	height: 100%;
 	float: left;
 }
-.author_info {
+.author__info {
 	margin-top: 5%;
 }
-.author-info_name {
+.author-info__name {
 	font-size: 16pt;
 	font-weight: bold;
 }
-.author-info_icons {
+.author-info__icons {
 	margin-top: 2%;
 }
-.author-info_icons > a {
+.author-info__icons > a {
 	margin-right: 1%;
 }
-.author-info_line {
+.author-info__line {
 	margin-top: 2%;
 	background-color: #dddddd;
 	height: 2px;
 	overflow: hidden;
 }
-.author-info_head {
+.author-info__head {
 	margin-top: 4%;
 	text-transform: capitalize;
 }
-.author-info_body {
+.author-info__body {
 	margin-top: 4%;
 	font-size: 11pt;
 	font-weight: normal;
 	font-style: italic;
 }
+/*__________________________ 3 BLOCKS __________________________*/
+/*__________________________ Cho-Chi __________________________*/
+.three-blocks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 70px;
+}
+.recipe-by, .recipe-complexity, .recipe-popular {
+	flex: 1;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.recipe-by {
+	height: 100%;
+}
+.recipe-by__head, .recipe-complexity__head, .recipe-popular__head {
+	margin: 5% 5% auto 5%;
+}
+.recipe-by__head > .head, .recipe-complexity__head > .head{
+	margin-left: 2%;
+}
+.recipe-by__head > .line, .recipe-complexity__head > .line {
+	background-color: #a9a9a9;
+	height: 2px;
+	width: 100%;
+}
+.recipe-by__body {
+	margin: 5% 5% auto 5%;
+}
+.recipe-by__body > img {
+	float: left;
+	margin-right: 5%;
+}
+.recipe-by__image img {
+	margin-top: 5%;
+	margin-bottom: 0;
+	width: 100%;
+}
 
+/*__________________________ COMPLEXITY __________________________*/
+.recipe-complexity {
+	margin-left: 5%;
+	padding-bottom: 2%;
+}
+.recipe-complexity__body {
+	margin: 3% 5% auto 5%;
+}
+.complexity {
+	display: flex;
+	margin-left: 8%;
+	text-transform: uppercase;
+}
+.complexity div {
+	flex: 1;
+}
+.complexity-recipes {
+	display: flex;
+	flex-direction: column;
+	font-size: 11pt;
+}
+.complexity-recipes > div {
+	margin-top: 10%;
+}
+.complexity-recipes > div > img {
+	margin-right: 3%;
+	width: 120px;
+	float: left;
+}
+.recipe-complexity__body > button {
+	margin: 5% auto auto 70%;
+	padding: 5px 10px;
+	font-size: 9pt;
+	text-transform: uppercase;
+}
+/*__________________________ POPULAR __________________________*/
+.recipe-popular {
+	margin-left: 5%;
+	background: url('../images/recipe-popular.png') no-repeat;
+    background-size: 100%;
+}
+.recipe-popular__head {
+	text-transform: capitalize;
+	font-size: 24pt;
+	font-weight: bold;
+	color: #921026;
+}
+.recipe-popular__body {
+	margin: 8% 5% auto 5%;
+}
+.recipe-popular__body .body-head {
+	text-transform: capitalize;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.recipe-popular__body .body-body {
+	margin-top: 3%;
+}
+.recipe-popular__body > button {
+	margin: 3% 3% auto auto;
+	padding: 5px 10px;
+	font-size: 9pt;
+	text-transform: uppercase;
+	float: left;
+}
+.recipe-popular__body > .recipe__info {
+	margin-top: 3%;
+}
 /*__________________________ FOOTER __________________________*/
 .footer {
-	clear: left;
-	margin-top: 600px;
+	margin-top: 70px;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	width: 100%;
-	position: relative;
 	text-align: center;
 	background-color: #2f2f2f;
 }
@@ -305,18 +416,18 @@ body::-webkit-scrollbar-thumb {
 .footer > * {
 	display: inline;
 }
-.footer_logo {
+.footer__logo {
 	margin-right: 5%;
 }
-.footer_logo img {
+.footer__logo img {
 	width: 86px;
 	vertical-align: middle;
 }
-.footer_menu a {
+.footer__menu a {
 	margin-left: 1%;
 	text-transform: uppercase;
 }
-.footer_reserved {
+.footer__reserved {
 	margin-left: 5%;
 	text-transform: uppercase;
 }

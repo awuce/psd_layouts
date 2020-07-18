@@ -8,51 +8,51 @@
 </head>
 <body>
 	<div class="container">
-		<div class="header">
+		<header class="header">
 			<div class="logo">
 				<img src="images/logo.png">
 			</div>
 			<div class="top-menu">
-				<div class="top-menu_logo">
+				<div class="top-menu__logo">
 					<img src="images/logo.png">
 				</div>
-				<div class="top-menu_drop-down-menu">
+				<nav class="top-menu__drop-down-menu">
 					<a href="#">home</a>
 					<a href="#">recipes</a>
 					<a href="#">photo gallery</a>
 					<a href="#">videos</a>
 					<a href="#">all categoties</a>
-				</div>
-				<div class="top-menu_search-button">
+				</nav>
+				<div class="top-menu__search-button">
 					<input type="text" name="search" placeholder="FIND A RECIPE">
 				</div>
 			</div>
-		</div>
+		</header> <!-- header -->
 
 		<div class="hero-page"> <!-- slider -->
-			<div class="hero-page_logo">
+			<div class="hero-page__logo">
 				<img src="images/logo.png">
 			</div>
-			<div class="hero-page_head">
+			<div class="hero-page__head">
 				bananas foster ice cream cake
 			</div>
-			<div class="hero-page_body">
+			<div class="hero-page__body">
 				If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly, this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
 			</div>
-			<div class="hero-page_get-button">
+			<div class="hero-page__get-button">
 				<button>get it recipe</button>
 			</div>
-		</div>
+		</div> <!-- hero-page -->
 
 		<div class="recipees">
 			<div class="recipe">
-				<div class="recipe_image">
+				<div class="recipe__image">
 					<img src="images/recipe1.png" alt="">
 				</div>
-				<div class="recipe_head">
+				<div class="recipe__head">
 					<div>raspberry & cream frozen yogurt pie</div>
 				</div>
-				<div class="recipe_info">
+				<div class="recipe__info">
 					<img src="images/icon-time.png"> 20mins |
 					<img src="images/icon-comm.png"> 4
 					<img src="images/icon-eye.png"> 307
@@ -60,13 +60,13 @@
 			</div>
 
 			<div class="recipe">
-				<div class="recipe_image">
+				<div class="recipe__image">
 					<img src="images/recipe2.png" alt="">
 				</div>
-				<div class="recipe_head">
+				<div class="recipe__head">
 					<div>giant ice cream sandwich</div>
 				</div>
-				<div class="recipe_info">
+				<div class="recipe__info">
 					<img src="images/icon-time.png"> 20mins |
 					<img src="images/icon-comm.png"> 4
 					<img src="images/icon-eye.png"> 307
@@ -75,88 +75,162 @@
 
 
 			<div class="recipe">
-				<div class="recipe_image">
+				<div class="recipe__image">
 					<img src="images/recipe3.png" alt="">
 				</div>
-				<div class="recipe_head">
+				<div class="recipe__head">
 					<div>dark chocolate crunch ice cream sandwich cake</div>
 				</div>
-				<div class="recipe_info">
+				<div class="recipe__info">
 					<img src="images/icon-time.png"> 20mins |
 					<img src="images/icon-comm.png"> 4
 					<img src="images/icon-eye.png"> 307
 				</div>
 			</div>
-		</div>
+		</div> <!-- recipees -->
 
 		<div class="recipe-full">
-			<div class="recipe-full_head">
+			<div class="recipe-full__head">
 				bananas foster ice cream cake
 			</div>
-			<div class="recipe-full_info">
+			<div class="recipe-full__info">
 				<img src="images/icon-time.png"> 15mins
 				<img src="images/icon-easy.png"> Easy
 				<button>save recipe</button>
 			</div>
-			<div class="recipe-full_body">
+			<div class="recipe-full__body">
 				<div>1 (8 ounce) container frozen whipped topping, thawed 20 chocolate round wafers, divided 1 (7 1/4 ounce) bottle Smucker's® Hot Dark Chocolate Microwaveable Topping, divided</div>
 				<div>Directions</div>
 				<div>ARRANGE 8 to 9 ice cream sandwiches in 9-inch square pan, cutting to form an even layer. Spread with half of whipped topping. Break or crush chocolate wafers and sprinkle over the whipped cream. Microwave 1 cup of chocolate topping into small microwave-safe bowl on HIGH for 30 seconds. Drizzle evenly over wafers.</div>
 				<div>TOP with remaining 8 to 9 ice cream sandwiches to form an even layer. Spread with remaining whipped topping. Freeze 3 hours or overnight.</div>
 			</div>
-		</div>
+		</div> <!-- recipe-full -->
 
-		<div class="error-404">
-			<div class="error-404_text">404</div>
-			<div class="error-404_line"></div>
-			<div class="error-404_head">Sorry</div>
-			<div class="error-404_body">
-				we coudn't<br>find the page
-			</div>
-			<div class="error-404_icon">:(</div>
-			<button class="error-404_button">back</button>
-		</div>
-
-		<div class="author">
-			<div class="author_text">Author</div>
-			<div class="author_line"></div>
-			<div class="author_image">
-				<img src="images/author.png">
-			</div>
-			<div class="author_info author-info">
-				<div class="author-info_name">Karen Gray</div>
-				<div class="author-info_country">United States</div>
-				<div class="author-info_icons">
-					<a href=""><i class="fa fa-google-plus"></i></a>
-					<a href=""><i class="fa fa-twitter"></i></a>
-					<a href=""><i class="fa fa-facebook"></i></a>
-					<a href=""><i class="fa fa-pinterest"></i></a>
+		<div class="two-blocks">
+			<div class="error-404">
+				<div class="error-404__text">404</div>
+				<div class="error-404__line"></div>
+				<div class="error-404__full error-404-full">
+					<div class="error-404-full__head">Sorry</div>
+					<div class="error-404-full__body">
+						we coudn't<br>find the page
+					</div>
+					<div class="error-404-full__icon">:(</div>
 				</div>
-				<div class="author-info_line"></div>
-				<div class="author-info_head">about lemon</div>
-				<div class="author-info_body">Over the fifteen-year life span of Food.com, we’ve learned that – in addition to eating – sharing is what you do best. And thanks to the 20 million of you who come here each month, we now have 500,000 recipes to show for it, more than anywhere else in the digital universe. We also have tons crazy-tempting photos, troves of recipe reviews and more than 2 million Facebook likes. That’s a heck of a lot of Food. Thank you!</div>
+				<button class="error-404__button">back</button>
+			</div> <!-- error-404 -->
+
+			<div class="author">
+				<div class="author__text">Author</div>
+				<div class="author__line"></div>
+				<div class="author__image">
+					<img src="images/author.png">
+				</div>
+				<div class="author__info author-info">
+					<div class="author-info__name">Karen Gray</div>
+					<div class="author-info__country">United States</div>
+					<div class="author-info__icons">
+						<a href=""><i class="fa fa-google-plus"></i></a>
+						<a href=""><i class="fa fa-twitter"></i></a>
+						<a href=""><i class="fa fa-facebook"></i></a>
+						<a href=""><i class="fa fa-pinterest"></i></a>
+					</div>
+					<div class="author-info__line"></div>
+					<div class="author-info__head">about lemon</div>
+					<div class="author-info__body">Over the fifteen-year life span of Food.com, we’ve learned that – in addition to eating – sharing is what you do best. And thanks to the 20 million of you who come here each month, we now have 500,000 recipes to show for it, more than anywhere else in the digital universe. We also have tons crazy-tempting photos, troves of recipe reviews and more than 2 million Facebook likes. That’s a heck of a lot of Food. Thank you!</div>
+				</div>
+			</div> <!-- author -->
+		</div> <!-- two-blocks -->
+
+		<div class="three-blocks">
+			<div class="recipe-by">
+				<div class="recipe-by__head">
+					<div class="head">Chi-Chi or Chichi</div>
+					<div class="line"></div>
+				</div>
+				<div class="recipe-by__body recipe-by-body">
+					<img src="images/recipe-by-author.png">
+					<div class="recipe-by-body__info">
+						<div>Recipe by<br>Smuckersreg Toppings</div>
+						<div class="recipe__info">
+							<img src="images/icon-time.png"> 20mins |
+							<img src="images/icon-comm.png"> 4
+							<img src="images/icon-eye.png"> 307
+						</div>
+					</div>
+				</div>
+				<div class="recipe-by__image">
+					<img src="images/recipe-by-image.png">
+				</div>
+			</div> <!-- recipe-by -->
+
+			<div class="recipe-complexity">
+				<div class="recipe-complexity__head">
+					<div class="head">Recipe</div>
+					<div class="line"></div>
+				</div>
+				<div class="recipe-complexity__body">
+					<div class="complexity">
+						<div>easy</div>
+						<div>middle</div>
+						<div>long</div>
+					</div>
+					<div class="complexity-recipes">
+						<div>
+							<img src="images/recipe1.png">
+							<div>by Smuckersreg Toppings</div>
+							<div>Thanks for the recipe lorem ipsum bla bla bla. Thanks for the recipe lore</div>
+						</div>
+						<div>
+							<img src="images/recipe2.png">
+							<div>by Smuckersreg Toppings</div>
+							<div>Thanks for the recipe lorem ipsum bla bla bla. Thanks for the recipe lore</div>
+						</div>
+						<div>
+							<img src="images/recipe3.png">
+							<div>by Smuckersreg Toppings</div>
+							<div>Thanks for the recipe lorem ipsum bla bla bla. Thanks for the recipe lore</div>
+						</div>
+					</div>
+					<button>view more</button>
+				</div>
+			</div> <!-- recipe-complexity -->
+
+			<div class="recipe-popular">
+				<div class="recipe-popular__head">popular now</div>
+				<div class="recipe-popular__body">
+					<div class="body-head">vanilla frozen coffe</div>
+					<div class="body-body">Mix coffee, sugar and creamer. Pour into blender and add ice cubes. Blend until smooth.</div>
+					<button>get recipe</button>
+					<div class="recipe__info">
+						<img src="images/icon-time.png"> 20mins |
+						<img src="images/icon-comm.png"> 4
+						<img src="images/icon-eye.png"> 307
+					</div>
+				</div>
 			</div>
-		</div>
+		</div> <!-- three-blocks -->
+
 		<!-- etc -->
-	</div>	
+	</div> <!-- container -->
 
 	<div class="footer">
-		<div class="footer_logo">
+		<div class="footer__logo">
 			<img src="images/logo-ondark.png">
 		</div>
-		<div class="footer_menu">
+		<div class="footer__menu">
 			<a href="#">home</a>
 			<a href="#">recipes</a>
 			<a href="#">photo gallery</a>
 			<a href="#">videos</a>
 			<a href="#">all categoties</a>
 		</div>
-		<div class="footer_reserved">
+		<div class="footer__reserved">
 			@ 2016-2017 lemon. all right reserved
 		</div>
-		<div class="footer_icons">
+		<div class="footer__icons">
 			
 		</div>
-	</div>
+	</div> <!-- footer -->
 </body>
 </html>
