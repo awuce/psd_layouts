@@ -300,6 +300,7 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: 70px;
+	height: 400px
 }
 .recipe-by, .recipe-complexity, .recipe-popular {
 	flex: 1;
@@ -312,10 +313,10 @@ body::-webkit-scrollbar-thumb {
 .recipe-by__head, .recipe-complexity__head, .recipe-popular__head {
 	margin: 5% 5% auto 5%;
 }
-.recipe-by__head > .head, .recipe-complexity__head > .head{
+.recipe-by__head > .head, .recipe-complexity__head > .head {
 	margin-left: 2%;
 }
-.recipe-by__head > .line, .recipe-complexity__head > .line {
+.recipe-by__head > .line, .recipe-complexity__head > .line, .target__head > .line, .tags__head > .line  {
 	background-color: #a9a9a9;
 	height: 2px;
 	width: 100%;
@@ -370,6 +371,7 @@ body::-webkit-scrollbar-thumb {
 }
 /*__________________________ POPULAR __________________________*/
 .recipe-popular {
+	height: 435px;
 	margin-left: 5%;
 	background: url('../images/recipe-popular.png') no-repeat;
     background-size: 100%;
@@ -397,13 +399,96 @@ body::-webkit-scrollbar-thumb {
 	font-size: 9pt;
 	text-transform: uppercase;
 	float: left;
+	background-color: #fff;
+	border: 1px solid #a9a9a9;
 }
 .recipe-popular__body > .recipe__info {
 	margin-top: 3%;
 }
+/*__________________________ TARGET __________________________*/
+.target {
+	/*flex: 1;*/
+	position: relative;
+	padding: 2% 3% 5% 3%;
+	width: 363px;
+	height: 530px;
+	background-color: #fff;
+}
+.target__head > .head, .tags__head > .head {
+	text-transform: capitalize;
+}
+.target__head > .line, .tags__head > .line {
+	margin-top: 5%;
+}
+.target__body > .head {
+	font-size: 18pt;
+	color: #055555;
+	margin-top: 7%;
+}
+.target__body > .article {
+	margin-top: 10%;
+}
+.target__body .circle {
+	background-color: #fff;
+ 	position: relative;
+	top: -22px;
+	left: 4px;
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+.target__body .circle-border {
+	/*background-color: #555777;*/
+	margin-right: 5%;
+  	position: relative;
+	width: 78px;
+	height: 78px;
+	border-radius: 100%;
+	float: left;
+}
+.target__body .circle-border_first {
+    background: linear-gradient(0deg, #b8105b 19%, lightgray 19%);
+}
+.target__body .circle-border_second {
+    background: linear-gradient(0deg, #2c6d6d 65%, lightgray 65%);
+}
+.target__body .circle-border_third {
+    background: linear-gradient(0deg, #87d0c5 50%, lightgray 50%);
+}
+.target__body .percent {
+	font-size: 14pt;
+	position: relative;
+	top: 25px;
+	left: 22px;
+	z-index: 10;
+}
+.target__body .name {
+	color: #6a6a6a;
+}
+.target__body .text {
+	color: #bfbfbf;
+}
+/*__________________________ TAGS __________________________*/
+.tags {
+	margin-left: 5%;
+	margin-top: 70px;
+	/*position: relative;*/
+	padding: 2% 3% 5% 3%;
+	background-color: #fff;
+	width: 358px;
+	height: 190px;
+}
+.tags__body {
+	margin-top: 5%;
+	font-size: 11pt;
+	font-weight: normal;
+	text-transform: uppercase;
+	word-spacing: 12px;
+}
+
 /*__________________________ FOOTER __________________________*/
 .footer {
-	margin-top: 70px;
+	margin-top: 140px;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	width: 100%;
