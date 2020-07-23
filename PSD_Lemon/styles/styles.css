@@ -8,7 +8,8 @@
 	box-sizing: border-box;
 	font-family: 'Comfortaa', cursive;
 }
-
+html {
+}
 body {
 	background-color: #eaeaea;
 }
@@ -24,18 +25,23 @@ body::-webkit-scrollbar-thumb {
 .container {
 	margin: 0px 10% 0px 10%;
 	padding: 0px 2% 0px 2%;
+	
+}
+
+.header {
+	padding: 4.55% 0px 4.55% 0px;
 }
 
 .logo {
-	margin-top: 4.55%;
+	margin-bottom: 4.55%;
 	text-align: center;
 }
 .logo img {
 	height: 150px;
 }
 
-.top-menu, .hero-page, .recipees, .recipe-full {
-	margin-top: 4.55%;
+.top-menu, .wrapper__hero-page , .recipees, .recipe-full {
+	margin-bottom: 4.55%;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -105,6 +111,12 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 1100px) {
 	.container {
 		margin: 0px;
+	}
+}
+@media (max-width: 1000px) {
+	.top-menu {
+		box-shadow: none;
+		margin-bottom: 0;
 	}
 }
 
@@ -194,46 +206,73 @@ body::-webkit-scrollbar-thumb {
 }
 /*__________________________ HERO PAGE __________________________*/
 .hero-page {
-	background-image: url('../images/slider-photo1.png');
-	background-repeat: no-repeat;
+	background: url('../images/slider-photo1.png') no-repeat;
 	background-size: cover;
 	background-position: 50%;
-	/*background-attachment: fixed;*/
-	/*background-origin: padding-box;*/
-	/*background-color: none;*/
-}
-.hero-page * {
-	background: none;
-}
-.hero-page__logo, .hero-page__head, .hero-page__body, .hero-page__get-button {
 	padding-left: 8%;
+}
+.hero-page__logo {
+	padding-bottom: 30px;
 }
 .hero-page__logo img {
 	width: 340px;
 }
 .hero-page__head {
 	font-size: 24pt;
-	padding-top: 35px;
+	padding-bottom: 30px;
 	text-transform: capitalize;
 	color: #921026;
 }
 .hero-page__body {
-	padding-top: 30px;
+	padding-bottom: 30px;
 	width: 40%;
 }
-.hero-page__get-button {
-	padding-top: 30px;
-}
-.hero-page__get-button button {
+.hero-page__button {
 	text-transform: uppercase;
 	padding: 5px 10px;
 	cursor: pointer;
+	background: none;
 }
+.buttton-end {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.container {
+		padding: 0px;
+	}
+	.wrapper__hero-page  {
+		box-shadow: none;
+	}
+	.hero-page {
+		padding-left: 2%;
+	}
+}
+@media (max-width: 800px) {
+	.hero-page * {
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	}
+	.hero-page {
+		display: flex;
+		flex-direction: column;
+		min-width: 100%;
+		height: 200px; /* ФИЧА*/
+	}
+	.buttton-end {
+		display: block;
+		background-color: #fff;
+		text-align: center;
+		padding: 2% 0px;
+	}
+} 
 /*__________________________ RECIPES __________________________*/
 .recipees {
 	padding-left: 5%;
 	padding-right: 5%;
 	display: flex;
+	flex-wrap: wrap;
 	background-color: #ffffff;
 }
 .recipees * {
