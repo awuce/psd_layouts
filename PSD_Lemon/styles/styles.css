@@ -30,22 +30,23 @@ body::-webkit-scrollbar-thumb {
 	padding: 4.55% 0px 4.55% 0px;
 }
 
+.wrapper__hero-page , .recipees, .recipe-full {
+	margin-bottom: 4.55%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-page, .recipees {
+	padding-top: 2.55%;
+	padding-bottom: 2.55%;
+}
+
+/*__________________________ LOGO __________________________*/
 .logo {
 	margin-bottom: 4.55%;
 	text-align: center;
 }
 .logo img {
 	height: 150px;
-}
-
-.wrapper__hero-page , .recipees, .recipe-full {
-	margin-bottom: 4.55%;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.hero-page, .recipees, .recipe-full {
-	padding-top: 2.55%;
-	padding-bottom: 2.55%;
 }
 
 @media (max-width: 800px) {
@@ -336,44 +337,58 @@ body::-webkit-scrollbar-thumb {
 		width: 70%;
 	}
 }
+@media (max-width: 400px) {
+	.recipe {
+		width: 100%;
+	}
+	.recipe__head, .recipe__info {
+		width: 88%;
+		margin: 0 auto;
+	}
+}
 
 /*__________________________ RECIPE FULL __________________________*/
 .recipe-full {
-	background: url('../images/recipe.png') no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-     background-size: 100%;
+     display: flex;
+     flex-direction: row;
+     background-color: #fff;
 }
-.recipe-full > * {
-	background-color: none;
+.recipe-full__image {
+	flex: 0 1 50%;
+}
+.recipe-full__image img {
+	width: 100%;
+}
+.recipe-full__recipe {
+	flex: 0 1 50%;
+	padding: 2.5%;
 }
 .recipe-full__head {
-	margin-left: 600px;
 	font-size: 18pt;
 	text-transform: capitalize;
 	color: #055555;
 }
 .recipe-full__info {
-	margin-left: 600px;
+	display: flex;
+}
+.recipe-full__info div {
+	flex: 0 1 60%;
+}
+.recipe-full__info button {
+	flex: 0 1 40%;
 }
 .recipe-full__info img {
 	width: 17px;
 	vertical-align: middle;
 }
 .recipe-full__info button {
-	margin-left: 41%;
 	padding: 8px 30px;
 	text-transform: uppercase;
-	width: 160px;
 	border: 1px solid #c2c2c2;
 	cursor: pointer;
 }
 .recipe-full__body {
-	margin-top: 15px;
-	margin-right: 20px;
-	margin-left: 600px;
-	padding-right: 20px;
+	margin-top: 2.5%;
 	height: 250px;
 	overflow-y: scroll;
 }
@@ -386,8 +401,13 @@ body::-webkit-scrollbar-thumb {
 .recipe-full__body::-webkit-scrollbar-thumb {
 	background-color: #555555;
 }
-.recipe-full__body div {
-	margin-top: 15px;
+.recipe-full__body p, .recipe-full__body h1 {
+	margin-bottom: 15px;
+}
+@media (max-width: 800px) {
+	.recipe-full {
+		flex-direction: column;
+	}
 }
 
 /*__________________________ 2 BLOCKS __________________________*/
