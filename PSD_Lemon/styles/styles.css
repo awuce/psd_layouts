@@ -30,8 +30,10 @@ body::-webkit-scrollbar-thumb {
 	padding: 4.55% 0px 4.55% 0px;
 }
 
-.wrapper__hero-page , .recipees, .recipe-full {
+.wrapper__hero-page , .recipees, .recipe-full, .two-blocks {
 	margin-bottom: 4.55%;
+}
+.wrapper__hero-page , .recipees, .recipe-full {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -72,9 +74,10 @@ body::-webkit-scrollbar-thumb {
 
 .top-menu__logo {
 	flex: 0 1 20%;
+	display: flex;
 }
 .top-menu__logo img {
-	width: 86px;
+	width: 90px;
 }
 .top-menu__drop-down-menu {
 	flex: 0 1 80%;
@@ -101,6 +104,7 @@ body::-webkit-scrollbar-thumb {
 }
 .menu__search-button {
 	flex: 0 0 10%;
+	margin-left: 3%;
 }
 .menu__search-button input[type=text] {
 	width: 160px;
@@ -212,6 +216,7 @@ body::-webkit-scrollbar-thumb {
 		font-size: 18pt;
 	}
 }
+
 /*__________________________ HERO PAGE __________________________*/
 .hero-page {
 	background: url('../images/slider-photo1.png') no-repeat;
@@ -264,7 +269,7 @@ body::-webkit-scrollbar-thumb {
 		display: flex;
 		flex-direction: column;
 		min-width: 100%;
-		height: 300px; /* ФИЧА*/
+		height: 300px;
 	}
 	.hero-page * {
 		height: 0;
@@ -279,7 +284,7 @@ body::-webkit-scrollbar-thumb {
 	}
 	.buttton-end button {
 		border: none;
-		font-size: 18px;
+		font-size: 12pt;
 	}
 } 
 
@@ -346,6 +351,9 @@ body::-webkit-scrollbar-thumb {
 		width: 88%;
 		margin: 0 auto;
 	}
+	.recipe__head > div, .recipe__info {
+		font-size: 11pt;
+	}
 }
 
 /*__________________________ RECIPE FULL __________________________*/
@@ -405,7 +413,7 @@ body::-webkit-scrollbar-thumb {
 .recipe-full__body::-webkit-scrollbar-thumb {
 	background-color: #555555;
 }
-.recipe-full__body p, .recipe-full__body h1 {
+.recipe-full__body p, .recipe-full__body h3 {
 	margin-bottom: 15px;
 }
 @media (max-width: 1000px) {
@@ -433,23 +441,35 @@ body::-webkit-scrollbar-thumb {
 	.recipe-full__info button {
 		flex-basis: 50%;
 	}
+	.recipe-full__head {
+		font-size: 14pt;
+	}
+	.recipe-full__info {
+		font-size: 11pt;
+	}
+	.recipe-full__info > button {
+		padding: 5px;
+		font-size: 9pt;
+	}
+	.recipe-full__body > * {
+		font-size: 11pt;
+	}
 }
 
 /*__________________________ 2 BLOCKS __________________________*/
 /*__________________________ ERROR __________________________*/
 .two-blocks {
 	display: flex;
-	flex-direction: row; /* column; when mobile*/
+	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .two-blocks > div {
-	flex: 1;
-	margin-top: 70px;
+  	flex: 0 0 auto;
 	padding: 2% 3%;
 	background-color: #ffffff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	width: 45%;
-	height: 500px;
+	width: 48%;
 }
 .error-404 {
 	background-image: url('../images/404.png');
@@ -490,14 +510,12 @@ body::-webkit-scrollbar-thumb {
 	background-color: #ffffff;
 	border: 1px solid #a9a9a9;
 	display: block;
-	margin: 26% auto 0 auto;
+	margin: 23% auto 0 auto;
 	padding: 5px 35px;
 	cursor: pointer;
 }
+
 /*__________________________ AUTHOR __________________________*/
-.author {
-	margin-left: 6%;
-}
 .author__image {
 	margin-top: 5%;
 	margin-right: 4%;
@@ -532,7 +550,42 @@ body::-webkit-scrollbar-thumb {
 	font-size: 11pt;
 	font-weight: normal;
 	font-style: italic;
+	height: 180px;
+	overflow-y: scroll;
 }
+.author-info__body::-webkit-scrollbar {
+	width: 5px;
+}
+.author-info__body::-webkit-scrollbar-track {
+	background-color: #dddddd;
+}
+.author-info__body::-webkit-scrollbar-thumb {
+	background-color: #555555;
+}
+
+@media (max-width: 800px) {
+	.two-blocks {
+		flex-direction: column;
+		align-content: center;
+	}
+	.two-blocks > div {
+		width: 100%;
+		box-shadow: none;
+	}
+	.author__image {
+		margin-top: 5%;
+		margin-right: 4%;
+		height: 250px;
+		float: left;
+	}
+	.error-404 {
+		display: none;
+	}
+	.error-404__full {
+		margin-top: 37%;
+	}
+}
+
 /*__________________________ 3 BLOCKS __________________________*/
 /*__________________________ Cho-Chi __________________________*/
 .three-blocks {
