@@ -30,7 +30,8 @@ body::-webkit-scrollbar-thumb {
 	padding: 4.55% 0px 4.55% 0px;
 }
 
-.wrapper__hero-page , .recipees, .recipe-full, .two-blocks {
+.wrapper__hero-page , .recipees, 
+.recipe-full, .two-blocks, .three-blocks {
 	margin-bottom: 4.55%;
 }
 .wrapper__hero-page , .recipees, .recipe-full {
@@ -462,14 +463,13 @@ body::-webkit-scrollbar-thumb {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	grid-column-gap: 2%;
 }
 .two-blocks > div {
-  	flex: 0 0 auto;
+  	flex: 1;
 	padding: 2% 3%;
 	background-color: #ffffff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	width: 48%;
 }
 .error-404 {
 	background-image: url('../images/404.png');
@@ -567,6 +567,7 @@ body::-webkit-scrollbar-thumb {
 	.two-blocks {
 		flex-direction: column;
 		align-content: center;
+		margin-bottom: 0;
 	}
 	.two-blocks > div {
 		width: 100%;
@@ -587,13 +588,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*__________________________ 3 BLOCKS __________________________*/
-/*__________________________ Cho-Chi __________________________*/
+/*__________________________ RECIPE BY __________________________*/
 .three-blocks {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin-top: 70px;
-	height: 400px
+	grid-column-gap: 2%;
 }
 .recipe-by, .recipe-complexity, .recipe-popular {
 	flex: 1;
@@ -617,31 +617,38 @@ body::-webkit-scrollbar-thumb {
 .recipe-by__body {
 	margin: 5% 5% auto 5%;
 }
+.recipe-by-body__info > .recipe__info > div {
+	display: inline-block;
+}
 .recipe-by__body > img {
 	float: left;
 	margin-right: 5%;
 }
+.recipe-by__image {
+	margin-bottom: 0px;
+}
 .recipe-by__image img {
 	margin-top: 5%;
-	margin-bottom: 0;
 	width: 100%;
+	vertical-align:bottom;
 }
 
 /*__________________________ COMPLEXITY __________________________*/
 .recipe-complexity {
-	margin-left: 5%;
-	padding-bottom: 2%;
+	padding: 1.5%;
 }
-.recipe-complexity__body {
-	margin: 3% 5% auto 5%;
+.recipe-complexity__head {
+	margin: 0;
 }
 .complexity {
 	display: flex;
-	margin-left: 8%;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
 	text-transform: uppercase;
 }
 .complexity div {
-	flex: 1;
+	flex: 0 0;
 }
 .complexity-recipes {
 	display: flex;
@@ -649,34 +656,39 @@ body::-webkit-scrollbar-thumb {
 	font-size: 11pt;
 }
 .complexity-recipes > div {
-	margin-top: 10%;
+	margin-top: 7%;
 }
 .complexity-recipes > div > img {
 	margin-right: 3%;
 	width: 120px;
 	float: left;
 }
-.recipe-complexity__body > button {
-	margin: 5% auto auto 70%;
-	padding: 5px 10px;
-	font-size: 9pt;
-	text-transform: uppercase;
+.complexity-recipes .bold {
+	font-weight: bold;
 }
+.complexity__view-more {
+	display: flex;
+	margin-top: 6%;
+}
+.complexity__view-more > button {
+	flex: 1;
+	padding: 5px;
+	font-size: 8pt;
+	text-transform: uppercase;
+	border: 1px solid #c2c2c2;
+}
+
 /*__________________________ POPULAR __________________________*/
 .recipe-popular {
-	height: 435px;
-	margin-left: 5%;
-	background: url('../images/recipe-popular.png') no-repeat;
-    background-size: 100%;
+	padding: 1.5%;
+	height: 100%;
 }
 .recipe-popular__head {
+	margin: 0;
 	text-transform: capitalize;
 	font-size: 24pt;
 	font-weight: bold;
 	color: #921026;
-}
-.recipe-popular__body {
-	margin: 8% 5% auto 5%;
 }
 .recipe-popular__body .body-head {
 	text-transform: capitalize;
@@ -698,6 +710,70 @@ body::-webkit-scrollbar-thumb {
 .recipe-popular__body > .recipe__info {
 	margin-top: 3%;
 }
+.recipe-popular__body > .recipe__info > div {
+	display: inline-block;
+}
+
+@media (max-width: 1300px) {
+	.recipe-by-body__info > div,
+	.recipe-popular__body > div {
+		font-size: 9pt;
+	}
+}
+@media (max-width: 800px) {
+	.three-blocks {
+		flex-direction: column;
+	}
+	.three-blocks > * {
+		width: 100%;
+		box-shadow: none;
+		margin-top: 0;
+	}
+	.recipe-by__head {
+		margin: 0;
+	}
+	.recipe-by-body__info > div,
+	.recipe-popular__body > div {
+		font-size: 12pt;
+	}
+	.recipe-by {
+		padding: 1.5%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.recipe-by > div {
+		flex: 0 0;
+		flex-basis: 48%;
+		margin-top: 2%;
+	}
+	.recipe-by__image img {
+		margin: 0;
+	}
+}
+@media (max-width: 650px) {
+	.recipe-by-body__info > div,
+	.recipe-popular__body > div {
+		font-size: 10pt;
+	}
+}
+@media (max-width: 530px) {
+	.recipe-by {
+		flex-direction: column;
+	}
+	.recipe-by > div {
+		margin: auto 5% 5% 5%;
+	}
+}
+@media (max-width: 300px) {
+	.complexity-recipes > div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: auto 5%;
+	}
+}
+
 /*__________________________ TARGET __________________________*/
 .target {
 	/*flex: 1;*/
