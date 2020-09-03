@@ -3,7 +3,7 @@
 * Фиксированная верстка
 * БЭМ
 ![screenshot of sample](https://gainulin.space/lemon1.png)
-![screenshot of sample](https://gainulin.space/lemon12.png)
+![screenshot of sample](https://gainulin.space/lemon2.png)
 ***
 ***PSD_Lemon***
 * Отзывчивая верстка
