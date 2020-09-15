@@ -13,7 +13,7 @@ function browser_sync() {
 }
 
 function scripts() {
-	return src('app/scripts/*.js')
+	return src('app/scripts/hover.js')
 		.pipe(concat('app.min.js'))
 		.pipe(dest('app/scripts/'))
 		.pipe(browserSync.stream());
@@ -31,11 +31,11 @@ function styles() {
 
 function start_watch() {
 	watch(['app/**/sass/**/*'], styles);
-	watch(['app/**/scripts/**/*', '!app/**/*.min.js'], scripts);
+	watch('app/**/scripts/**/*').on('change', browserSync.reload);
 	watch('app/**/*.html').on('change', browserSync.reload);
 }
 
 exports.browser_sync = browser_sync;
 exports.scripts = scripts;
 exports.start_watch = start_watch;
-exports.default = parallel(styles, scripts, browser_sync, start_watch);
+exports.default = parallel(styles, browser_sync, start_watch);
