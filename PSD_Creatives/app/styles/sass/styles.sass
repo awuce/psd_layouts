@@ -163,18 +163,9 @@ body
 .agency
 	color: #fff
 	max-width: 1200px
-	height: 90vh
 	margin: 0 auto
+	padding-bottom: 5%
 	position: relative
-	> .big
-		color: #3c8daf
-		line-height: 0
-		font-weight: 700
-		font-size: 200pt
-		top: 33%
-		width: 100%
-		position: absolute
-		text-align: center
 	&-wrapper
 		background-color: $first_color
 	&__header
@@ -185,15 +176,27 @@ body
 		text-align: center
 		position: relative
 		z-index: 2
+		> .big
+			color: #3c8daf
+			line-height: 0
+			font-weight: 700
+			font-size: 200pt
+			top: 50%
+			width: 100%
+			position: absolute
+			text-align: center
+			z-index: -1
 	&__content
-		display: grid
-		grid-template-columns: 1fr 1fr 1fr 1fr
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
 
 .feature
 	max-width: 250px
 	display: flex
 	flex-direction: column
 	align-items: center
+	margin: 0 5px 10px 5px
 	&__logo
 		width: 80px
 		height: 80px
@@ -206,17 +209,22 @@ body
 	&__text
 		text-align: justify
 
+
 @media (max-width: 1000px)
 	.agency__header
 		font-size: 35pt
+
+@media (max-width: 1009px)
+	.agency__header > .big
+		font-size: 170pt
 
 @media (max-width: 660px)
 	.agency
 		&__header
 			font-size: 25pt
-		> .big
-			font-size: 170px
-			top: 30%
+			padding: 100px 0px
+			> .big
+				font-size: 150pt
 
 
 .blog
