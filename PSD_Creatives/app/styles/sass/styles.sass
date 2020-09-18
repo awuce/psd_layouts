@@ -16,6 +16,7 @@ body
 		background-position: 50% 0%
 		width: 100%
 		height: 100vh
+		position: relative
 	&-afterline
 		background-color: #c3c2c1
 		width: 100%
@@ -44,6 +45,9 @@ body
 		display: flex
 		flex-direction: column
 		align-items: center
+		position: absolute
+		bottom: 10px
+		width: 100%
 		> .scroll
 			&__text
 				font-size: 14pt
@@ -65,8 +69,6 @@ body
 					position: absolute
 					top: 13px
 					left: 17px
-
-
 
 .navigation-wrapper
 	display: grid
@@ -209,7 +211,6 @@ body
 	&__text
 		text-align: justify
 
-
 @media (max-width: 1000px)
 	.agency__header
 		font-size: 35pt
@@ -226,40 +227,12 @@ body
 			> .big
 				font-size: 150pt
 
-
-// .blog
-// 	max-width: 1200px
-// 	margin: 0 auto
-// 	background-color: #fff
-// 	display: flex
-// 	flex-direction: row
-// 	overflow-x: hidden
-// 	&-container
-// 		background-color: #222  
-// 		margin-bottom: 500px
-// 	&__content
-// 		padding: 100px 20px
-// 		width: 50%
-// 	&__body
-// 		background-color: #e55
-// 	&__name
-// 		font-size: 20pt
-// 		text-transform: uppercase
-// 	&__text
-// 		font-weight: 200
-// 	&__image
-// 		position: relative
-// 		flex: 0 0 50%
-// 		> img
-// 			position: absolute
-// 			width: 100%
-// 			height: 100%
-// 			left: 0
-// 			top: 0
-// 			object-fit: cover
-
 .section
 	overflow: hidden
+	display: flex
+	flex-direction: column
+	&_rev
+		flex-direction: column-reverse
 	&__container
 		max-width: 1200px
 		margin: 0 auto
@@ -268,19 +241,24 @@ body
 	&__content
 		flex: 0 0 100%
 		display: flex
-		background-color: #222
 		color: #fff
+		background-color: #222
+		&_rev
+			color: #222
+			background-color: #f5f5f5
 	&__body
-		padding: 0 20px
+		padding: 20px 20px 40px 20px
 		text-align: justify
 	&__title
 		text-transform: uppercase
 	&__image img
 		max-width: 100%
+		vertical-align: top
 
 @media (min-width: 767px)
 	.section
 		display: flex
+		flex-direction: row
 		&__body
 			width: 46%
 		&__image
@@ -288,6 +266,8 @@ body
 			transform: translate(-100%, 0px)
 			position: relative
 			padding-bottom: 30%
+			&_rev
+				transform: translate(0%, 0px)
 			> img
 				position: absolute
 				width: 100%
