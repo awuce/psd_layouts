@@ -340,9 +340,60 @@ body {
 .logo-agency {
   width: 80px;
   height: 80px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  position: relative; }
+  .logo-agency > img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25%;
+    left: 25%; }
 
 .logo-blog {
   width: 250px;
   height: 250px;
   overflow: hidden; }
+
+.block-white {
+  background-color: #fff; }
+  .block-white > * {
+    color: #000; }
+
+.write-copy {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .write-copy__wrapper {
+    background-color: #11749e;
+    padding: 4% 0px; }
+  .write-copy__block {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .write-copy__image > img {
+    width: 50px;
+    height: 50px; }
+  .write-copy__text {
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 13pt;
+    color: #fff; }
+
+@media (max-width: 767px) {
+  .write-copy {
+    padding: 2%; }
+    .write-copy__block {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }

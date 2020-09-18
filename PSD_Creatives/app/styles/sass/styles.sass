@@ -221,10 +221,10 @@ body
 
 @media (max-width: 660px)
 	.block__header
-			font-size: 25pt
-			padding: 100px 0px
-			> .big
-				font-size: 150pt
+		font-size: 25pt
+		padding: 100px 0px
+		> .big
+			font-size: 150pt
 
 .section
 	overflow: hidden
@@ -267,7 +267,7 @@ body
 			padding-bottom: 30%
 			&_rev
 				transform: translate(0%, 0px)
-			> img
+			& > img
 				position: absolute
 				width: 100%
 				height: 100%
@@ -280,7 +280,48 @@ body
 		width: 80px
 		height: 80px
 		border-radius: 50%
+		position: relative
+		& > img
+			width: 40px
+			height: 40px
+			position: absolute
+			top: 25%
+			left: 25%
 	&-blog
 		width: 250px
 		height: 250px
 		overflow: hidden
+
+.block-white
+	background-color: #fff
+	& > *
+		color: #000
+
+.write-copy
+	padding: 0 10px
+	display: flex
+	align-items: center
+	&__wrapper
+		background-color: $first_color
+		padding: 4% 0px
+	&__block
+		max-width: 1200px
+		margin: 0 auto
+		display: flex
+		flex-direction: row
+	&__image
+		& > img
+			width: 50px
+			height: 50px
+	&__text
+		text-align: justify
+		padding: 0 20px
+		font-size: 13pt
+		color: #fff
+
+@media (max-width: 767px)
+	.write-copy
+		padding: 2%	
+		&__block
+			flex-direction: column
+
