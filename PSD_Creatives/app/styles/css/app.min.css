@@ -30,7 +30,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  height: 70vh;
+  height: 70%;
   background: none;
   text-transform: uppercase;
   line-height: 20px; }
@@ -185,15 +185,15 @@ body {
     letter-spacing: 3px;
     padding-left: 6px; } }
 
-.agency {
+.block {
   color: #fff;
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 5%;
   position: relative; }
-  .agency-wrapper {
+  .block__wrapper {
     background-color: #11749e; }
-  .agency__header {
+  .block__header {
     font-size: 50pt;
     text-transform: uppercase;
     margin: 0;
@@ -201,7 +201,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 2; }
-    .agency__header > .big {
+    .block__header > .big {
       color: #3c8daf;
       line-height: 0;
       font-weight: 700;
@@ -211,7 +211,7 @@ body {
       position: absolute;
       text-align: center;
       z-index: -1; }
-  .agency__content {
+  .block__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -234,30 +234,30 @@ body {
           align-items: center;
   margin: 0 5px 10px 5px; }
   .feature__logo {
-    width: 80px;
-    height: 80px;
-    background-color: #2e85aa;
-    border-radius: 50%; }
+    min-width: 80px;
+    min-height: 80px;
+    background-color: #2e85aa; }
   .feature__name {
     text-transform: uppercase;
     padding: 10px 0px;
-    font-size: 14pt; }
+    font-size: 12pt;
+    font-weight: 600; }
   .feature__text {
     text-align: justify; }
 
 @media (max-width: 1000px) {
-  .agency__header {
+  .block__header {
     font-size: 35pt; } }
 
 @media (max-width: 1009px) {
-  .agency__header > .big {
+  .block__header > .big {
     font-size: 170pt; } }
 
 @media (max-width: 660px) {
-  .agency__header {
+  .block__header {
     font-size: 25pt;
     padding: 100px 0px; }
-    .agency__header > .big {
+    .block__header > .big {
       font-size: 150pt; } }
 
 .section {
@@ -336,3 +336,13 @@ body {
         top: 0;
         -o-object-fit: cover;
            object-fit: cover; } }
+
+.logo-agency {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; }
+
+.logo-blog {
+  width: 250px;
+  height: 250px;
+  overflow: hidden; }

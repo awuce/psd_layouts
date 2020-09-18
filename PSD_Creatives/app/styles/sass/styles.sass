@@ -26,7 +26,7 @@ body
 		flex-direction: column
 		justify-content: center
 		text-align: center
-		height: 70vh
+		height: 70%
 		background: none
 		text-transform: uppercase
 		line-height: 20px
@@ -162,13 +162,13 @@ body
 			letter-spacing: 3px
 			padding-left: 6px
 
-.agency
+.block
 	color: #fff
 	max-width: 1200px
 	margin: 0 auto
 	padding-bottom: 5%
 	position: relative
-	&-wrapper
+	&__wrapper
 		background-color: $first_color
 	&__header
 		font-size: 50pt
@@ -200,28 +200,27 @@ body
 	align-items: center
 	margin: 0 5px 10px 5px
 	&__logo
-		width: 80px
-		height: 80px
+		min-width: 80px
+		min-height: 80px
 		background-color: #2e85aa
-		border-radius: 50%
 	&__name
 		text-transform: uppercase
 		padding: 10px 0px
-		font-size: 14pt
+		font-size: 12pt
+		font-weight: 600
 	&__text
 		text-align: justify
 
 @media (max-width: 1000px)
-	.agency__header
+	.block__header
 		font-size: 35pt
 
 @media (max-width: 1009px)
-	.agency__header > .big
+	.block__header > .big
 		font-size: 170pt
 
 @media (max-width: 660px)
-	.agency
-		&__header
+	.block__header
 			font-size: 25pt
 			padding: 100px 0px
 			> .big
@@ -275,3 +274,13 @@ body
 				left: 0
 				top: 0
 				object-fit: cover
+
+.logo
+	&-agency
+		width: 80px
+		height: 80px
+		border-radius: 50%
+	&-blog
+		width: 250px
+		height: 250px
+		overflow: hidden
