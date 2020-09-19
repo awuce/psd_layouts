@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Creatives</title>
+    <link rel="icon" href="images/logo.png" /> 
 	<link rel="stylesheet" href="styles/css/app.min.css">
 </head>
 <body>
 	<header class="header-wrapper">
 		<div class="navigation-wrapper">
 			<div class="logo">CS</div>
-			<nav class="nav-wrapper">
-				<ul class="nav">
-					<li class="nav__item">home</li>
-					<li class="nav__item">pages</li>
-					<li class="nav__item">features</li>
-					<li class="nav__item">extensions</li>
-					<li class="nav__item">tutorials</li>
-					<li class="nav__item">contact us</li>
+			<nav class="nav-wrapper" id="nav-wrapper">
+				<ul class="nav" id="nav">
+					<li class="nav__item"><a href="#" class="item">home</a></li>
+					<li class="nav__item"><a href="#" class="item">pages</a></li>
+					<li class="nav__item"><a href="#" class="item">features</a></li>
+					<li class="nav__item"><a href="#" class="item">extensions</a></li>
+					<li class="nav__item"><a href="#" class="item">tutorials</a></li>
+					<li class="nav__item"><a href="#" class="item">contact us</a></li>
 					<li class="nav__item nav__burger" onclick="menuBurger()"></li>
 				</ul>
 			</nav>
@@ -25,10 +26,10 @@
 		<div class="header-afterline"></div>
 		<div class="header-main">
 			<h1 class="header-main__name">creatives</h1>
-			<h3 class="header-main__before-name"> power by power</h3>
+			<h3 class="header-main__before-name">power by power</h3>
 		</div>
 		<div class="header-scroll-down">
-			<div class="scroll__text">scroll down</div>
+			<div class="scroll__text"><a  id="linkToTeam" href="#team">scroll down</a></div>
 			<div class="scroll__link" id="scroll__link">
 				<div class="corner" id="corner"></div>
 			</div>
@@ -159,13 +160,13 @@
 		</div>
 	</div>
 
-
-	<div class="block__wrapper block-white">
+	<div id="team" class="block__wrapper block-white">
 		<div class="block">
 			<h2 class="block__header">
 				our team
 				<div class="big">t</div>
 			</h2>
+			<div class="block__subheader">sales long tail infkuencer pitch release niche market</div>
 			<div class="block__content">
 				<div class="feature feature-team">
 					<div class="feature__logo">
@@ -208,6 +209,6 @@
 	</div>
 
 
-	<script type="text/javascript" src="scripts/hover.js"></script>
+	<script type="text/javascript" src="scripts/scripts.js"></script>
 </body>
 </html>

@@ -53,6 +53,9 @@ body
 				font-size: 14pt
 				text-transform: capitalize
 				margin-bottom: 10px
+				& > a
+					text-decoration: none
+					color: #fff
 			&__link
 				width: 50px
 				height: 50px
@@ -69,6 +72,9 @@ body
 					position: absolute
 					top: 13px
 					left: 17px
+					& > a
+						width: 100%
+						height: 100%
 
 .navigation-wrapper
 	display: grid
@@ -90,56 +96,90 @@ body
 .nav
 	display: grid
 	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
-	position: relative
 	height: 22px
 	&__item
 		cursor: pointer
 		color: #fff
 		margin: 0 auto
 		font-size: 18pt
-		list-style-type: none	
+		list-style-type: none
+		position: relative
+		& > .item
+			color: #fff
+			text-decoration: none
 		&:first-letter
 			text-transform: uppercase
 		&:hover:not(:last-child):before
 			background-color: $first_color
 			content: ''
 			position: absolute
-			width: 100px
+			width: 150%
 			height: 5px
 			bottom: -48px
-	&__burger
-		width: 50px
-		height: 5px
-		background-color: $first_color
-		margin: auto
-		display: none
-		&:after
-			content: ''
-			width: 50px
-			height: 5px
-			background-color: #fff
-			position: absolute
-			top: 0
-		&:before
-			content: ''
-			width: 50px
-			height: 5px
-			background-color: #fff
-			position: absolute
-			bottom: 0
+			left: -25%
 
 @media (max-width: 1100px)
 	.nav__item
 		font-size: 14pt
 
 @media (max-width: 1000px)
+	body.lock
+		overflow: hidden
 	.nav
 		display: flex
+		&.active
+			flex-direction: column
+			position: relative
+			padding-top: 50px
+		&-wrapper.active
+			width: 100vw
+			height: 100vh
+			top: 0
+			left: 0
+			position: fixed
+			background-color: #d7d7d7
+			z-index: 1
 		&__item:not(:last-child)
 			width: 0
 			overflow: hidden
+			&.active
+				width: 100vw
+				height: 100vh
+				text-align: center
+				margin-top: 50px
+				overflow: visible
+				& > *
+					color: #000
+					font-weight: 700
+					font-size: 20pt
 		&__burger
-			display: block
+			background-color: $first_color
+			width: 50px
+			height: 5px
+			margin: auto
+			z-index: 2
+			&.active
+				position: absolute
+				top: 30px
+				right: 7.5%
+				&:after
+					background-color: #000
+				&:before
+					background-color: #000
+			&:after
+				background-color: $second_color
+				content: ''
+				width: 50px
+				height: 5px
+				position: absolute
+				top: 10px
+			&:before
+				background-color: $second_color
+				content: ''
+				width: 50px
+				height: 5px
+				position: absolute
+				bottom: 10px
 
 @media (max-width: 600px)
 	.header-main
@@ -172,6 +212,7 @@ body
 		background-color: $first_color
 	&__header
 		font-size: 50pt
+		font-weight: 400
 		text-transform: uppercase
 		margin: 0
 		padding: 170px 0px
@@ -188,6 +229,12 @@ body
 			position: absolute
 			text-align: center
 			z-index: -1
+	&__subheader
+		color: #c3c2c1
+		font-size: 26pt
+		font-weight: 700
+		text-align: center
+		height: 30vh
 	&__content
 		display: flex
 		justify-content: space-around
@@ -343,6 +390,8 @@ body
 		height: 100vh
 	&__name > h2
 		text-transform: uppercase
+		font-size: 20pt
+		font-weight: 400
 	&__content
 		padding: 20px
 		color: #fff
@@ -350,6 +399,8 @@ body
 	&__image
 		text-align: center
 		flex: 0 0 50%
+		& > img
+			max-width: 300px
 	&__stack
 		max-width: 500px
 		display: flex
@@ -375,7 +426,6 @@ body
 			display: flex
 			justify-content: center
 			margin-bottom: 10%
-			// max-width: 250px
 			& > img
 				vertical-align: top
 				max-width: 250px
@@ -391,3 +441,4 @@ body
 			text-align: center
 			font-size: 10pt
 			font-weight: 700
+
