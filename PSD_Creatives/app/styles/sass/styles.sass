@@ -325,3 +325,44 @@ body
 		&__block
 			flex-direction: column
 
+.mobile
+	display: flex
+	flex-direction: row
+	max-width: 1200px
+	height: 100vh
+	margin: 0 auto
+	justify-content: center
+	align-items: center
+	&__wrapper
+		background-image: url('../../images/mobile.png')
+		background-size: center
+		background-position: 50% 0%
+		width: 100%
+		height: 100vh
+	&__name > h2
+		text-transform: uppercase
+	&__content
+		padding: 20px
+		color: #fff
+		max-width: 500px
+	&__image
+		text-align: center
+		flex: 0 0 50%
+	&__stack
+		max-width: 500px
+		display: flex
+		flex-direction: column
+
+.stack
+	vertical-align: middle
+	background-color: $first_color
+	margin-top: 20px
+	padding: 10px
+	text-transform: uppercase
+
+@media (max-width: 767px)
+	.mobile
+		flex-direction: column
+		&__image
+			display: none
+
