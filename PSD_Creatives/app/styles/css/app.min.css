@@ -175,6 +175,7 @@ body {
         height: 100vh;
         text-align: center;
         margin-top: 50px;
+        margin-left: -40px;
         overflow: visible; }
         .nav__item:not(:last-child).active > * {
           color: #000;
